@@ -126,7 +126,7 @@ h3 .typer {
 
 /*** Responsive styles for screens smaller than 500px ***/
 @media only screen and (max-width: 500px) {
-
+    #header {height: 150px;}
     #header .column {
         padding: 0 15px;
     }
