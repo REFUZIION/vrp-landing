@@ -19,12 +19,23 @@ body {
 }
 
 /*** HEADER CSS ***/
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    height: 100px;
+    display: inline;
+}
+#header h1 {
+    display: inline;
+}
 #header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 125px;
+    min-height: 125px;
     background: url("../image/polygon.png");
     background-position: top;
     background-color: var(--vrgreen);
@@ -189,7 +200,7 @@ h3 .typer {
 /*** Responsive styles for screens smaller than 860px ***/
 @media only screen and (max-width: 860px) {
     #header {
-        height: 125px;
+        min-height: 125px;
         flex-direction: column;
         text-align: center;
     }
@@ -207,13 +218,14 @@ h3 .typer {
 
 /*** Responsive styles for screens smaller than 500px ***/
 @media only screen and (max-width: 500px) {
-    #header {height: 150px;}
+    #header {min-height: 150px;}
     #main-content {text-align: center}
     #header .column {
         padding: 0 15px;
     }
     header h1.title {
         font-size: 24px;
+        display: none;
     }
     p.text {
        font-size: 14px;
@@ -224,4 +236,10 @@ h3 .typer {
     h3.typer-wrapper p{
         display: block;
      }
+}
+
+@media only screen and (max-width: 350px) {
+    #header .logo-wrapper {
+        flex-direction: column;
+    }
 }

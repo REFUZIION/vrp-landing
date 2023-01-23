@@ -1,4 +1,11 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 22 version
+*/
+
+/*
  * Author: REFUZIION <info@refuzion.nl>
  */
  :root {
@@ -13,15 +20,31 @@ body {
     background-color: var(--gray);
     color: #fff;
     min-height: 100vh;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 /*** HEADER CSS ***/
 .logo-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .logo {
     height: 100px;
@@ -31,9 +54,18 @@ body {
     display: inline;
 }
 #header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
     min-height: 125px;
     background: url("../image/polygon.png");
@@ -43,14 +75,23 @@ body {
 }
 
 .navbar-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 50px;
 }
 .navbar {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
 }
 .navbar .navitem {
@@ -60,6 +101,8 @@ body {
     color: var(--babyblue);
     text-decoration: none;
     font-size: 18px;
+    -webkit-transition: 0.3s ease-in-out all;
+    -o-transition: 0.3s ease-in-out all;
     transition: 0.3s ease-in-out all;
 }
 .navbar .navitem a i {
@@ -74,19 +117,38 @@ body {
 
 /*** MAIN CSS ***/
 #main-content {
-    flex: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 #main-content .background-container {
     z-index: -1;
-    filter: blur(2px);
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
     position:absolute;
     width: 100%;
     height: 100%;
+    background: -webkit-gradient( linear, left top, left bottom, from(rgba(30, 31, 35, 0.9)), to(rgba(30, 31, 35, 0.95)) ), url('../image/bayside.png');
+    background: -o-linear-gradient( rgba(30, 31, 35, 0.9), rgba(30, 31, 35, 0.95) ), url('../image/bayside.png');
     background: linear-gradient( rgba(30, 31, 35, 0.9), rgba(30, 31, 35, 0.95) ), url('../image/bayside.png');
     background-position:center top;
     background-size:cover;
@@ -166,22 +228,38 @@ h3 .typer {
 	background: var(--vrgreen);
 	width: 120%;
 	left: -10%;
-	transform: skew(30deg);
+	-webkit-transform: skew(30deg);
+	    -ms-transform: skew(30deg);
+	        transform: skew(30deg);
+	-webkit-transition: -webkit-transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+	transition: -webkit-transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+	-o-transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 	transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+	transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1), -webkit-transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 }
 .cta-button.second::before {
 	background: #454545;
 }
 
 .cta-button:hover::before {
-	transform: translate3d(100%,0,0);
+	-webkit-transform: translate3d(100%,0,0);
+	        transform: translate3d(100%,0,0);
 }
 
 /*** FOOTER CSS ***/
 #footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
     height: 25px;
     background: url("../image/polygon.png");
@@ -201,7 +279,11 @@ h3 .typer {
 @media only screen and (max-width: 860px) {
     #header {
         min-height: 125px;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
         text-align: center;
     }
     #header .navbar-wrapper {
@@ -240,6 +322,10 @@ h3 .typer {
 
 @media only screen and (max-width: 350px) {
     #header .logo-wrapper {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 }
