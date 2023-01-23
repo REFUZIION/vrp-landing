@@ -181,7 +181,7 @@ h3 .typer {
 #footer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     height: 25px;
     background: url("../image/polygon.png");
@@ -195,7 +195,9 @@ h3 .typer {
     color: var(--babyblue);
     text-decoration: none;
 }
-
+#footer h3.title {
+    padding: 0 25px;
+}
 
 /*** Responsive styles for screens smaller than 860px ***/
 @media only screen and (max-width: 860px) {
